@@ -1,0 +1,60 @@
+/*
+ * project1.cpp
+ *
+ *  Created on: Jan 30, 2021
+ *      Author: aranawillow
+ */
+
+#include <iostream>
+using namespace std;
+
+class CSR {
+	protected:
+		int n; //The number of rows of the original matrix
+		int m; //The number of columns of the original matrix
+		int nonZeros; //The number of non-zeros in the original matrix
+		int* values; //Value array assuming all are integers
+		int* rowPtr; //Array that contains number of non-zero elements in each row of the original matrix
+		int* colPos; //Array that contains the column number from the original matrix of non-zero values
+		//There may be others you may need
+	public:
+		CSR(); //default or empty constructor;
+		CSR(CSR& matrixB); //copy constructor;
+		CSR(int rows, int cols, int numNonZeros);
+		int getNumRows();
+		void addValue(int value); //add a new value in the values array
+		void addColumn(int col); //add a column in the colPos array
+		void addRow(int row); //add a row in the rowPtr array
+		void display(); //print the contents of the three arrays. Each array must be on a different line(separated by a
+		//new line character) and you have exactly a single space between each value printed
+		int* matrixVectorMultiply(int* inputVector); //matrix-vector multiplication
+		CSR* matrixMultiply(CSR& matrixB); //matrix-matrix multiplication
+		~CSR(); //destructor
+		//You may have other methods
+};
+CSR::CSR(int rows, int cols, int numNonZeros) {
+	n = rows;
+	m = cols;
+	nonZeros = numNonZeros;
+	values = new int[nonZeros];
+	colPos = new int[nonZeros];
+	rowPtr = new int[n];
+}
+
+int* CSR::matrixVectorMultiply(int* inputVector) {
+	int* outputVector = new int[n];
+
+	for(int i = 0; i < n; ++i) {
+		outputVector[i] = 0;
+	}
+
+	for(int i = 0; i < n; ++i) {
+		for(int j = rowPtr[i]; j < rowPtr[i + 1]; ++j) {
+			outputVector[i] = outputVector[i] +values[j] * inputVector[colPos[j]];
+		}
+	}
+	return outputVector;
+}
+
+
+

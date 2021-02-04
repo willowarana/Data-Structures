@@ -1,0 +1,118 @@
+20:53:42 **** Rebuild of configuration Debug for project HelloWorld ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o ../main.cpp 
+g++ -o HelloWorld main.o 
+Info: Nothing to build for HelloWorld
+16:54:20 **** Rebuild of configuration Debug for project HelloWorld ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o ../main.cpp 
+g++ -o HelloWorld main.o 
+16:54:24 **** Rebuild of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o ../main.cpp 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CSR.o ../CSR.cpp 
+../CSR.cpp:12:7: error: redefinition of ‘class CSR’
+ class CSR {
+       ^~~
+In file included from ../CSR.cpp:8:0:
+../CSR.h:11:7: note: previous definition of ‘class CSR’
+ class CSR {
+       ^~~
+../CSR.cpp:36:1: error: prototype for ‘CSR::CSR(int, int, int)’ does not match any in class ‘CSR’
+ CSR::CSR(int rows, int cols, int numNonZeros) {
+ ^~~
+In file included from ../CSR.cpp:8:0:
+../CSR.h:11:7: error: candidates are: constexpr CSR::CSR(CSR&&)
+ class CSR {
+       ^~~
+../CSR.h:11:7: error:                 constexpr CSR::CSR(const CSR&)
+../CSR.h:11:7: error:                 constexpr CSR::CSR()
+../CSR.cpp:45:48: error: no ‘int* CSR::matrixVectorMultiply(int*)’ member function declared in class ‘CSR’
+ int* CSR::matrixVectorMultiply(int* inputVector) {
+                                                ^
+16:31:30 **** Rebuild of configuration Debug for project HelloWorld ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o ../main.cpp 
+g++ -o HelloWorld main.o 
+16:31:36 **** Rebuild of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In function ‘int main()’:
+../project1.cpp:95:14: warning: ‘B’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  (*B).display();
+  ~~~~~~~~~~~~^~
+g++ -o Project1 project1.o 
+project1.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:84: undefined reference to `CSR::addValue(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:85: undefined reference to `CSR::addRow(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:86: undefined reference to `CSR::addColumn(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:88: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:90: undefined reference to `CSR::CSR(CSR&)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:91: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:95: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:106: undefined reference to `CSR::getNumRows()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:112: undefined reference to `CSR::matrixMultiply(CSR&)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:113: undefined reference to `CSR::display()'
+collect2: error: ld returned 1 exit status
+Info: Nothing to build for HelloWorld
+17:06:38 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In function ‘int main()’:
+../project1.cpp:112:14: warning: ‘B’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  (*B).display();
+  ~~~~~~~~~~~~^~
+g++ -o Project1 project1.o 
+project1.o: In function `CSR::CSR(CSR&)':
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:52: undefined reference to `CSR::getNumRows()'
+project1.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:101: undefined reference to `CSR::addValue(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:102: undefined reference to `CSR::addRow(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:103: undefined reference to `CSR::addColumn(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:105: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:108: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:112: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:123: undefined reference to `CSR::getNumRows()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:129: undefined reference to `CSR::matrixMultiply(CSR&)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:130: undefined reference to `CSR::display()'
+collect2: error: ld returned 1 exit status
+15:52:35 **** Rebuild of configuration Debug for project HelloWorld ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o ../main.cpp 
+g++ -o HelloWorld main.o 
+15:52:40 **** Rebuild of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In function ‘int main()’:
+../project1.cpp:135:14: warning: ‘B’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  (*B).display();
+  ~~~~~~~~~~~~^~
+g++ -o Project1 project1.o 
+project1.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:125: undefined reference to `CSR::addRow(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:126: undefined reference to `CSR::addColumn(int)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:128: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:131: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:135: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:152: undefined reference to `CSR::matrixMultiply(CSR&)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:153: undefined reference to `CSR::display()'
+collect2: error: ld returned 1 exit status
+23:24:32 **** Rebuild of configuration Debug for project HelloWorld ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o ../main.cpp 
+g++ -o HelloWorld main.o 
+23:24:38 **** Rebuild of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In function ‘int main()’:
+../project1.cpp:153:14: warning: ‘B’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  (*B).display();
+  ~~~~~~~~~~~~^~
+g++ -o Project1 project1.o 
+project1.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:146: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:149: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:153: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:170: undefined reference to `CSR::matrixMultiply(CSR&)'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:171: undefined reference to `CSR::display()'
+collect2: error: ld returned 1 exit status

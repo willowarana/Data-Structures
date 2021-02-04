@@ -13,6 +13,7 @@ class CSR {
 		int n; //The number of rows of the original matrix
 		int cN = 0; //The current number of rows initialized
 		int m; //The number of columns of the original matrix
+		int cM = 0; //The current number of columns initialized
 		int nonZeros; //The number of non-zeros in the original matrix
 		int currNonZeros = 0; //The current number of non-zeros initialized
 		int* values; //Value array assuming all are integers
@@ -36,7 +37,6 @@ class CSR {
 };
 CSR::CSR() {
 	n = 0;
-	cN = 0;
 	m = 0;
 	values = NULL;
 	rowPtr = NULL;
@@ -45,7 +45,6 @@ CSR::CSR() {
 }
 CSR::CSR(int rows, int cols, int numNonZeros) {
 	n = rows;
-	cN = 0;
 	m = cols;
 	nonZeros = numNonZeros;
 	values = new int[nonZeros];
@@ -56,6 +55,7 @@ CSR::CSR(CSR& matrixB) {
 	n = matrixB.n;
 	cN = matrixB.cN;
 	m = matrixB.m;
+	cM = matrixB.cM;
 	nonZeros = matrixB.nonZeros;
 	currNonZeros = matrixB.currNonZeros;
 	values = new int [nonZeros];
@@ -73,34 +73,12 @@ CSR::CSR(CSR& matrixB) {
 }
 
 int CSR::getNumRows() {
-	return cN;
+	return n;
 }
 
 void CSR::addValue(int value) {
 	values[currNonZeros] = value;
 	++currNonZeros;
-}
-
-void CSR::addColumn(int col) {
-	colPos[currNonZeros] = col;
-}
-
-void CSR::addRow(int row) {
-	if(cN == 0) {
-		for(int i = 0; i < n; ++i) {
-			rowPtr[i] = 0;
-		}
-	}
-	if(row < (n - 1)) {
-		for(int i = row + 1; i < n; ++i){
-			++rowPtr[i];
-		}
-	}
-	++cN;
-}
-
-void CSR::display() {
-
 }
 
 int* CSR::matrixVectorMultiply(int* inputVector) {
@@ -147,7 +125,6 @@ int main() {
 		(*A).addRow(row); //needs to be done cleverly in the method
 		(*A).addColumn(col);
 	}
-	cout << "Matrix A:" << endl;
 	(*A).display();
 
 	CSR* C = new CSR(*A); //calling the copy constructor

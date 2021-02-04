@@ -99,10 +99,6 @@ void CSR::addRow(int row) {
 	++cN;
 }
 
-void CSR::display() {
-
-}
-
 int* CSR::matrixVectorMultiply(int* inputVector) {
 	int* outputVector = new int[n];
 
@@ -147,7 +143,6 @@ int main() {
 		(*A).addRow(row); //needs to be done cleverly in the method
 		(*A).addColumn(col);
 	}
-	cout << "Matrix A:" << endl;
 	(*A).display();
 
 	CSR* C = new CSR(*A); //calling the copy constructor
