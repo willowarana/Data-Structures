@@ -32,8 +32,7 @@ class CSR {
 		int* matrixVectorMultiply(int* inputVector); //matrix-vector multiplication
 		CSR* matrixMultiply(CSR& matrixB); //matrix-matrix multiplication
 		~CSR(); //destructor
-		int* getColumnVector(int col);
-		int* getRowVec(int row);
+		//You may have other methods
 };
 CSR::CSR() {
 	n = 0;
@@ -98,44 +97,6 @@ void CSR::addRow(int row) {
 		}
 	}
 	++cN;
-}
-
-int* CSR::getColumnVector(int col) {
-	int *colVector = new int[n];
-	int r;
-	for(int i = 0; i < n; ++i) {
-		colVector[i] = 0;
-	}
-	bool found;
-	int k, j;
-
-	k = 0;
-	for(int i = 0; i < n - 1;++i) {
-		r = rowPtr[i + 1] - rowPtr[i];
-		k = rowPtr[i];
-		found = false;
-		j = 0;
-		while((j < r) && !found) {
-			if(colPos[k] == col) {
-				found = true;
-				colVector[i] = values[k];
-			}
-			k++;
-			j++;
-		}
-	}
-	int p = rowPtr[n - 1];
-	found = false;
-	while((p < (nonZeros)) && (!found)) {
-		if(colPos[p] == col) {
-			colVector[n - 1] = values[p];
-			found = true;
-		}
-		else {
-			p++;
-		}
-	}
-	return colVector;
 }
 
 void CSR::display() {

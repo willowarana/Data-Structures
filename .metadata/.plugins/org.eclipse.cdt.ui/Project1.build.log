@@ -1,18 +1,14 @@
-23:24:38 **** Rebuild of configuration Debug for project Project1 ****
+01:05:19 **** Incremental Build of configuration Debug for project Project1 ****
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
 ../project1.cpp: In function ‘int main()’:
-../project1.cpp:153:14: warning: ‘B’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+../project1.cpp:197:14: warning: ‘B’ may be used uninitialized in this function [-Wmaybe-uninitialized]
   (*B).display();
   ~~~~~~~~~~~~^~
 g++ -o Project1 project1.o 
 project1.o: In function `main':
-/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:146: undefined reference to `CSR::display()'
-/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:149: undefined reference to `CSR::display()'
-/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:153: undefined reference to `CSR::display()'
-/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:170: undefined reference to `CSR::matrixMultiply(CSR&)'
-/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:171: undefined reference to `CSR::display()'
+/home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:214: undefined reference to `CSR::matrixMultiply(CSR&)'
 collect2: error: ld returned 1 exit status
 
-23:24:40 Build Failed. 5 errors, 1 warnings. (took 1s.907ms)
+01:05:21 Build Failed. 1 errors, 1 warnings. (took 1s.988ms)
 

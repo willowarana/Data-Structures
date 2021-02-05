@@ -1,7 +1,1 @@
-23:24:32 **** Rebuild of configuration Debug for project HelloWorld ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o ../main.cpp 
-g++ -o HelloWorld main.o 
-
-23:24:38 Build Finished. 0 errors, 0 warnings. (took 5s.756ms)
-
+Info: Nothing to build for HelloWorld
