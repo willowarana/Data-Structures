@@ -128,3 +128,158 @@ g++ -o Project1 project1.o
 project1.o: In function `main':
 /home/aranawillow/Desktop/DataStructures/Project1/Debug/../project1.cpp:214: undefined reference to `CSR::matrixMultiply(CSR&)'
 collect2: error: ld returned 1 exit status
+Info: Nothing to build for HelloWorld
+04:05:17 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+../project1.cpp: In member function ‘int* CSR::matrixVectorMultiply(int*)’:
+../project1.cpp:205:16: error: lvalue required as left operand of assignment
+   if((i + 1) = n)
+                ^
+../project1.cpp: In function ‘int main()’:
+../project1.cpp:258:35: error: ‘nunNonZeros’ was not declared in this scope
+  B = new CSR(numRows, numColumns, nunNonZeros);
+                                   ^~~~~~~~~~~
+../project1.cpp:258:35: note: suggested alternative: ‘numNonZeros’
+  B = new CSR(numRows, numColumns, nunNonZeros);
+                                   ^~~~~~~~~~~
+                                   numNonZeros
+../project1.cpp:259:19: warning: left operand of comma operator has no effect [-Wunused-value]
+  for(int i = 0; i < numNonZeros, ++i) {
+                 ~~^~~~~~~~~~~~~
+../project1.cpp:259:37: error: expected ‘;’ before ‘)’ token
+  for(int i = 0; i < numNonZeros, ++i) {
+                                     ^
+Info: Nothing to build for HelloWorld
+04:07:59 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+16:38:22 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+20:28:08 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:43:57 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:45:39 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:59:33 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:00:50 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:02:12 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:03:10 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘void CSR::display()’:
+../project1.cpp:170:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int j = 0; j < sizeof(currRow); ++j) {
+                  ~~^~~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:09:58 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:11:35 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+02:12:24 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+02:27:48 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+03:42:22 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project1

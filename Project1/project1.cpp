@@ -18,12 +18,11 @@ class CSR {
 		int* values; //Value array assuming all are integers
 		int* rowPtr; //Array that contains number of non-zero elements in each row of the original matrix
 		int* colPos; //Array that contains the column number from the original matrix of non-zero values
-		//There may be others you may need
 	public:
 		CSR(); //default or empty constructor;
 		CSR(CSR& matrixB); //copy constructor;
-		CSR(int rows, int cols, int numNonZeros);
-		int getNumRows();
+		CSR(int rows, int cols, int numNonZeros); //constructor that sets the number of rows, columns, and non-zero values
+		int getNumRows(); //returns the number of initialized rows
 		void addValue(int value); //add a new value in the values array
 		void addColumn(int col); //add a column in the colPos array
 		void addRow(int row); //add a row in the rowPtr array
@@ -32,11 +31,11 @@ class CSR {
 		int* matrixVectorMultiply(int* inputVector); //matrix-vector multiplication
 		CSR* matrixMultiply(CSR& matrixB); //matrix-matrix multiplication
 		~CSR(); //destructor
-		int* getColumnVector(int col);
-		int* getRowVec(int row);
+		int* getColumnVector(int col); //returns an array containing the values in the desired column
+		int* getRowVec(int row); //returns an array containing the values in the desired row
 };
 CSR::CSR() {
-	n = 0;
+	n = 0; //set every value to 0 or null
 	cN = 0;
 	m = 0;
 	values = NULL;
@@ -45,21 +44,21 @@ CSR::CSR() {
 	nonZeros = 0;
 }
 CSR::CSR(int rows, int cols, int numNonZeros) {
-	n = rows;
-	cN = 0;
-	m = cols;
+	n = rows; //initialize the total number of rows
+	cN = 0; //start with 0 rows initialized because they have not been filled yet
+	m = cols; //initialize the total number of columns
 	nonZeros = numNonZeros;
 	values = new int[nonZeros];
 	colPos = new int[nonZeros];
 	rowPtr = new int[n];
 }
 CSR::CSR(CSR& matrixB) {
-	n = matrixB.n;
+	n = matrixB.n; //copy over the int values
 	cN = matrixB.cN;
 	m = matrixB.m;
 	nonZeros = matrixB.nonZeros;
 	currNonZeros = matrixB.currNonZeros;
-	values = new int [nonZeros];
+	values = new int [nonZeros]; //make deep copies of values, colPos, and rowPtr
 	for (int i = 0; i < nonZeros; ++i) {
 		values[i] = matrixB.values[i];
 	}
@@ -74,43 +73,44 @@ CSR::CSR(CSR& matrixB) {
 }
 
 int CSR::getNumRows() {
-	return cN;
+	return cN; //return the current number of rows initialized
 }
 
 void CSR::addValue(int value) {
-	values[currNonZeros] = value;
-	++currNonZeros;
+	values[currNonZeros] = value; //add the given value to the next uninitialized location in the values array
+	++currNonZeros; //update the next uninitialized location/the number of nonZeros
 }
 
 void CSR::addColumn(int col) {
-	colPos[currNonZeros] = col;
+	colPos[currNonZeros - 1] = col; //add the given column to the colPos array at the next uninitialized location,
+									//subtracting 1 because currNonZeros was updated in the addValue method
 }
 
 void CSR::addRow(int row) {
-	if(cN == 0) {
-		for(int i = 0; i < n; ++i) {
+	if(cN == 0) { //check to see if this is the first row
+		for(int i = 0; i < n; ++i) { //initialize all of the rows in rowPtr to 0
 			rowPtr[i] = 0;
 		}
 	}
-	if(row < (n - 1)) {
-		for(int i = row + 1; i < n; ++i){
+	if(row < (n - 1)) { //only do this if it is before the last row
+		for(int i = row + 1; i < n; ++i){ //add one to every row to the right of the given row
 			++rowPtr[i];
 		}
 	}
-	++cN;
+	++cN; //update the number of initialized rows
 }
 
 int* CSR::getColumnVector(int col) {
-	int *colVector = new int[n];
+	int *colVector = new int[n]; //initialize a new vector with an index for every column
 	int r;
-	for(int i = 0; i < n; ++i) {
+	for(int i = 0; i < n; ++i) { //initialize each value to 0
 		colVector[i] = 0;
 	}
 	bool found;
 	int k, j;
 
 	k = 0;
-	for(int i = 0; i < n - 1;++i) {
+	for(int i = 0; i < n - 1;++i) { //check to see if each value is in the desired column and add it to colVector if so
 		r = rowPtr[i + 1] - rowPtr[i];
 		k = rowPtr[i];
 		found = false;
@@ -126,7 +126,7 @@ int* CSR::getColumnVector(int col) {
 	}
 	int p = rowPtr[n - 1];
 	found = false;
-	while((p < (nonZeros)) && (!found)) {
+	while((p < (nonZeros)) && (!found)) { //look at the last row to see if each value is in the desired column and add it to colVector if so
 		if(colPos[p] == col) {
 			colVector[n - 1] = values[p];
 			found = true;
@@ -138,23 +138,102 @@ int* CSR::getColumnVector(int col) {
 	return colVector;
 }
 
-void CSR::display() {
+int* CSR::getRowVec(int row) {
+	int *vector = new int[n]; //initialize a vector with an index representing each value in the given row
+	for(int i = 0; i < n; ++i) { //initialize each value to 0
+		vector[i] = 0;
+	}
 
+	if(row < n - 1) { //ensure that this is not the last row
+		for(int i = rowPtr[row]; i < rowPtr[row + 1]; ++i) {
+			for(int j = 0; j < m; ++j) {
+				if(colPos[i] == j)
+					vector[j] = values[i]; //add the value if it is in the correct row
+			}
+		}
+	} else {
+		for(int i = rowPtr[row]; i < nonZeros; ++i) { //if this is the last row, check the remaining values
+			for(int j = 0; j < m; ++j) {
+				if(colPos[i] == j) {
+					vector[j] = values[i];
+				}
+			}
+		}
+	}
+	return vector;
 }
 
-int* CSR::matrixVectorMultiply(int* inputVector) {
+void CSR::display() {
+	int* currRow;
+	for(int i = 0; i < n; ++i) {
+		currRow = getRowVec(i);
+		for(int j = 0; j < n; ++j) {
+			cout << currRow[j] << " ";
+		}
+		cout << endl;
+	}
+
+	cout << "rowPtr: ";
+	for(int i = 0; i < n; ++i) {
+		cout << rowPtr[i] << " ";
+	}
+
+	cout << endl << "colPos: ";
+	for(int i = 0; i < nonZeros; ++i) {
+		cout << colPos[i] << " ";
+	}
+
+	cout << endl << "values: ";
+	for(int i = 0; i < nonZeros; ++i) {
+		cout << values[i] << " ";
+	}
+	cout << endl;
+}
+
+int* CSR::matrixVectorMultiply(int *inputVector) {
 	int* outputVector = new int[n];
 
 	for(int i = 0; i < n; ++i) {
 		outputVector[i] = 0;
 	}
 
+	int sum = 0;
+	int start, end;
 	for(int i = 0; i < n; ++i) {
-		for(int j = rowPtr[i]; j < rowPtr[i + 1]; ++j) {
-			outputVector[i] = outputVector[i] + values[j] * inputVector[colPos[j]];
+		sum = 0;
+		start = rowPtr[i];
+		if((i + 1) == n)
+			end = nonZeros;
+		else
+			end = rowPtr[i + 1];
+
+		for(int j = start; j < end; ++j) {
+			sum = sum + values[j] * inputVector[colPos[j]];
 		}
+		outputVector[i] = sum;
 	}
 	return outputVector;
+}
+
+CSR* CSR::matrixMultiply(CSR& matrixB) {
+	int* currRow;
+	int* currCol;
+	int sum = 0;
+	CSR* product = new CSR(n, matrixB.m, n * matrixB.m);
+	for(int i = 0; i < n; ++i) {
+		currRow = this->getRowVec(i);
+		for(int j = 0; j < n; ++j){
+		currCol = matrixB.getColumnVector(j);
+			for(int k = 0; k < n; ++k) {
+				sum += (currRow[k] * currCol[k]);
+		}
+			product->addValue(sum);
+			product->addColumn(j);
+			product->addRow(n);
+			sum = 0;
+	}
+}
+	return product;
 }
 
 CSR::~CSR() {
@@ -190,10 +269,21 @@ int main() {
 	(*A).display();
 
 	CSR* C = new CSR(*A); //calling the copy constructor
+	cout << "Copied Matrix C:" << endl;
 	(*C).display();
 
 	//read in the second matrix which is similar to the first into the CSR pointer B and display;
 	//write code for this
+	cin >> numRows >> numColumns;
+	cin >> numNonZeros;
+	B = new CSR(numRows, numColumns, numNonZeros);
+	for(int i = 0; i < numNonZeros; ++i) {
+		cin >> row >> col >> value;
+		(*B).addValue(value);
+		(*B).addRow(row);
+		(*B).addColumn(col);
+	}
+	cout << "Matrix B:" << endl;
 	(*B).display();
 
 	//read in the vector
@@ -202,6 +292,13 @@ int main() {
 	for(int i = 0; i < numColumns; ++i) {
 		cin >> aVector[i];
 	}
+	cout << "Vector:" << endl;
+	for(int i = 0; i < numColumns; ++i) {
+		cout << aVector[i] << " ";
+	}
+	cout << endl;
+	cout << "A*vector:" << endl;
+
 
 	//Matrix-vector multiplication
 	int* resultVector = (*A).matrixVectorMultiply(aVector);
@@ -220,7 +317,7 @@ int main() {
 	delete A;
 	delete B;
 	delete C;
-	delete resultMatrix;
+//	delete resultMatrix;
 
 	return 0;
 }
