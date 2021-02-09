@@ -247,8 +247,6 @@ CSR::~CSR() {
 	n = 0;
 	m = 0;
 	nonZeros = 0;
-	cN = 0;
-	currNonZeros = 0;
 }
 
 int main() {

@@ -73,7 +73,7 @@ CSR::CSR(CSR& matrixB) {
 }
 
 int CSR::getNumRows() {
-	return n; //return the  number of rows
+	return cN; //return the current number of rows initialized
 }
 
 void CSR::addValue(int value) {
@@ -210,49 +210,44 @@ int* CSR::matrixVectorMultiply(int *inputVector) {
 		for(int j = start; j < end; ++j) { //multiply each value in that row by the given vector and add it to a sum
 			sum = sum + values[j] * inputVector[colPos[j]];
 		}
-		outputVector[i] = sum; //the sum is put into the correct row in the outputVector
+		outputVector[i] = sum;
 	}
 	return outputVector;
 }
 
 CSR* CSR::matrixMultiply(CSR& matrixB) {
-	int* currRow; //the current row to multiply
-	int* currCol; //the current column to multiply
-	int sum = 0; //the sum of the row and column products
-	CSR* product = new CSR(n, matrixB.m, n * matrixB.m); //initialize the product matrix with the first matrix's rows and the second matrix's columns
-														//assume every value in the matrix is nonZero
-	for(int i = 0; i < n; ++i) { //step through each row
-		currRow = this->getRowVec(i); //get the current row
-		for(int j = 0; j < n; ++j){ //step through each column
-		currCol = matrixB.getColumnVector(j); //get the current column
-			for(int k = 0; k < n; ++k) { //step through each value in the column/row
-				sum += (currRow[k] * currCol[k]); //multiply the values in the current column and the current row and add to a sum
+	int* currRow;
+	int* currCol;
+	int sum = 0;
+	CSR* product = new CSR(n, matrixB.m, n * matrixB.m);
+	for(int i = 0; i < n; ++i) {
+		currRow = this->getRowVec(i);
+		for(int j = 0; j < n; ++j){
+		currCol = matrixB.getColumnVector(j);
+			for(int k = 0; k < n; ++k) {
+				sum += (currRow[k] * currCol[k]);
 		}
-			if(sum != 0) { //only add non-zero sums to the product matrix
 			product->addValue(sum);
 			product->addColumn(j);
-			product->addRow(i);
-			sum = 0; //reset sum to 0
-			}
+			product->addRow(n);
+			sum = 0;
 	}
 }
 	return product;
 }
 
 CSR::~CSR() {
-	//delete the values, rowPtr, and colPos arrays and reset the number of rows, columns, and non-zero values to 0
 	if(values != NULL) delete [] values;
 	if(rowPtr != NULL) delete [] rowPtr;
 	if(colPos != NULL) delete [] colPos;
+	cout << "CSR Object Destroyed!!" << endl;
 	n = 0;
 	m = 0;
 	nonZeros = 0;
-	cN = 0;
-	currNonZeros = 0;
 }
 
 int main() {
-	//declare initial variables
+
 	CSR* A;
 	CSR* B;
 	int* aVector;
@@ -267,7 +262,7 @@ int main() {
 	for(int i = 0; i < numNonZeros; ++i) {
 		cin >> row >> col >> value;
 		(*A).addValue(value);
-		(*A).addRow(row);
+		(*A).addRow(row); //needs to be done cleverly in the method
 		(*A).addColumn(col);
 	}
 	cout << "Matrix A:" << endl;
@@ -278,6 +273,7 @@ int main() {
 	(*C).display();
 
 	//read in the second matrix which is similar to the first into the CSR pointer B and display;
+	//write code for this
 	cin >> numRows >> numColumns;
 	cin >> numNonZeros;
 	B = new CSR(numRows, numColumns, numNonZeros);
@@ -312,7 +308,6 @@ int main() {
 	cout << endl;
 
 	//Matrix-matrix multiplication
-	cout << "A*B:" << endl;
 	CSR* resultMatrix = (*C).matrixMultiply(*B);
 	(*resultMatrix).display();
 

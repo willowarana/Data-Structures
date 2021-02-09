@@ -283,3 +283,88 @@ g++ -o Project1 project1.o
 Info: Nothing to build for Project1
 Info: Nothing to build for HelloWorld
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:14:28 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:05:58 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:07:23 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:07:58 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:08:49 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:20:01 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:31:37 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘CSR* CSR::matrixMultiply(CSR&)’:
+../project1.cpp:222:6: warning: unused variable ‘nonZeros’ [-Wunused-variable]
+  int nonZeros = 0;
+      ^~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+20:48:52 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+../project1.cpp: In member function ‘CSR* CSR::matrixMultiply(CSR&)’:
+../project1.cpp:222:6: warning: unused variable ‘nonZeros’ [-Wunused-variable]
+  int nonZeros = 0;
+      ^~~~~~~~
+g++ -o Project1 project1.o 
+Info: Nothing to build for HelloWorld
+20:49:02 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project1
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:12:29 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:13:17 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:26:09 **** Incremental Build of configuration Debug for project Project1 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project1.o ../project1.cpp 
+g++ -o Project1 project1.o 
