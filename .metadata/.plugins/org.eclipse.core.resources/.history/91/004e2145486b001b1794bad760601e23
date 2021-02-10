@@ -167,7 +167,7 @@ void CSR::display() {
 	int* currRow; //keep track of the current row to print
 	for(int i = 0; i < n; ++i) { //step through each row of the matrix
 		currRow = getRowVec(i);
-		for(int j = 0; j < m; ++j) { //print out each value of that row
+		for(int j = 0; j < n; ++j) { //print out each value of that row
 			cout << currRow[j] << " ";
 		}
 		cout << endl;
@@ -219,7 +219,7 @@ CSR* CSR::matrixMultiply(CSR& matrixB) {
 	int* currRow; //the current row to multiply
 	int* currCol; //the current column to multiply
 	int sum = 0; //the sum of the row and column products
-	CSR* product = new CSR(n, matrixB.m, n * matrixB.m); //initialize the product matrix with the first matrix's rows and the second matrix's columns
+	CSR* product = new CSR(n, matrixB.m, nonZeros); //initialize the product matrix with the first matrix's rows and the second matrix's columns
 														//assume every value in the matrix is nonZero
 	for(int i = 0; i < n; ++i) { //step through each row
 		currRow = this->getRowVec(i); //get the current row
