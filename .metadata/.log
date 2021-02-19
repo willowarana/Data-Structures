@@ -1932,3 +1932,124 @@ java.lang.InterruptedException
 	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:149)
 	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:85)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2021-02-19 03:52:20.740 -----------------------------------------------
+eclipse.buildId=4.18.0.I20201202-1800
+java.version=15.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.debug.ui 4 120 2021-02-19 03:52:51.846
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.runInUIThreadWithTimeout(SelectedResourceManager.java:262)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getFromUI(SelectedResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getActiveWindow(SelectedResourceManager.java:231)
+	at org.eclipse.debug.ui.DebugUITools.getDebugContext(DebugUITools.java:247)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getDelegate(DelegatingDebugTextHover.java:99)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getHoverInfo2(DelegatingDebugTextHover.java:68)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:149)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-02-19 03:55:25.196
+!MESSAGE Indexed 'project2' (0 sources, 0 headers) in 0.01 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.core.resources 2 566 2021-02-19 03:56:14.873
+!MESSAGE null parent found while collapsing trees
+!STACK 0
+java.lang.NullPointerException: null parent found while collapsing trees
+	at org.eclipse.core.internal.resources.SaveManager.sortTrees(SaveManager.java:1542)
+	at org.eclipse.core.internal.resources.SaveManager.collapseTrees(SaveManager.java:320)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1208)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-02-19 03:56:14.893
+!MESSAGE Indexed 'Project 2' (0 sources, 0 headers) in 0.002 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.core.resources 2 566 2021-02-19 04:01:14.958
+!MESSAGE null parent found while collapsing trees
+!STACK 0
+java.lang.NullPointerException: null parent found while collapsing trees
+	at org.eclipse.core.internal.resources.SaveManager.sortTrees(SaveManager.java:1542)
+	at org.eclipse.core.internal.resources.SaveManager.collapseTrees(SaveManager.java:320)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1208)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 566 2021-02-19 04:24:03.108
+!MESSAGE null parent found while collapsing trees
+!STACK 0
+java.lang.NullPointerException: null parent found while collapsing trees
+	at org.eclipse.core.internal.resources.SaveManager.sortTrees(SaveManager.java:1542)
+	at org.eclipse.core.internal.resources.SaveManager.collapseTrees(SaveManager.java:320)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1208)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.debug.ui 4 120 2021-02-19 04:26:10.307
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.runInUIThreadWithTimeout(SelectedResourceManager.java:262)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getFromUI(SelectedResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getActiveWindow(SelectedResourceManager.java:231)
+	at org.eclipse.debug.ui.DebugUITools.getDebugContext(DebugUITools.java:247)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getDelegate(DelegatingDebugTextHover.java:99)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getHoverInfo2(DelegatingDebugTextHover.java:68)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:149)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.ui 4 120 2021-02-19 04:33:09.359
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.runInUIThreadWithTimeout(SelectedResourceManager.java:262)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getFromUI(SelectedResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getActiveWindow(SelectedResourceManager.java:231)
+	at org.eclipse.debug.ui.DebugUITools.getDebugContext(DebugUITools.java:247)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getDelegate(DelegatingDebugTextHover.java:99)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getHoverInfo2(DelegatingDebugTextHover.java:68)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:149)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.debug.ui 4 120 2021-02-19 04:33:11.136
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.runInUIThreadWithTimeout(SelectedResourceManager.java:262)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getFromUI(SelectedResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.stringsubstitution.SelectedResourceManager.getActiveWindow(SelectedResourceManager.java:231)
+	at org.eclipse.debug.ui.DebugUITools.getDebugContext(DebugUITools.java:247)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getDelegate(DelegatingDebugTextHover.java:99)
+	at org.eclipse.cdt.debug.internal.ui.editors.DelegatingDebugTextHover.getHoverInfo2(DelegatingDebugTextHover.java:68)
+	at org.eclipse.cdt.internal.ui.text.c.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:149)
+	at org.eclipse.cdt.internal.ui.text.c.hover.CEditorTextHoverProxy.getHoverInfo2(CEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.core.resources 2 566 2021-02-19 04:35:02.496
+!MESSAGE null parent found while collapsing trees
+!STACK 0
+java.lang.NullPointerException: null parent found while collapsing trees
+	at org.eclipse.core.internal.resources.SaveManager.sortTrees(SaveManager.java:1542)
+	at org.eclipse.core.internal.resources.SaveManager.collapseTrees(SaveManager.java:320)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1208)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
