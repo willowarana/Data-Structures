@@ -88,21 +88,61 @@ int myString::Size () {
 }
 // overloading = operator - initialize object with an existing string
 myString& myString::operator = (char* B) {
-	// TODO
-	return NULL;
+	int i = 0;
+		while (B[i] != '\0')i++;
+		size = i;
+		strArray = new char[size];
+		emptyString (strArray, size+1);
+		for (int j=0; j < size; j++)
+			strArray[j] = B[j];
+	return *this;
 }
 // overloading = operator - initialize object with an existing mystring object
 myString& myString::operator = (myString& B) {
-	// TODO
-	return NULL;
+	delete [] strArray;
+		strArray = NULL;
+		size = B.size;
+		strArray = new char[size];
+		emptyString(strArray, size+1);
+		stringCopy (B.strArray, size, strArray);
+	return *this;
 }
 // checking if two myString objects are the same - return true or false
 bool myString::operator == (myString& B) {
-	// TODO
+	if(size == B.size ){
+		bool same = true;
+		for(int i = 0; i < size; ++i) {
+			if(strArray[i] != B.strArray[i]) {
+				same = false;
+			}
+		}
+		return same;
+	}
+	else {
 	return false;
+	}
 }
 // comparison of myString A if less than myString B - return true or false
 bool myString::operator < (myString& B) {
+	//TODO
+	int smallestSize;
+	bool sameSoFar = true;
+	bool sameSize = false;
+	if(size < B.size) {
+		smallestSize = size;
+	}
+	else if(size == B.size) {
+		smallestSize = size;
+		sameSize = true;
+	}
+	else {
+		smallestSize = B.size;
+	}
+	//compare each value in strArray and find first one to be different
+	//compare that value to know which is smaller
+	//if they have all the same values at the end of the smallest size,
+	//and same size is not true then bigger size is greater
+	//if same size is true at that point return false
 return false;
 }
 // comparison of myString A if greater than myString B - return true or false
@@ -236,6 +276,7 @@ int main () {
 
 	//Now read a text and put them in the bagOfWords instance.
 	bagOfWords* myBag = new bagOfWords ();
+	token = getNextToken();
 	while (token != NULL) {
 		tokenString = new myString (token); //create a myString object with thetoken
 		(*myBag).addWord(*tokenString); //add token to myBag

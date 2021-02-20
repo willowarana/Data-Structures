@@ -433,3 +433,226 @@ In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
   return NULL;
          ^~~~
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:45:15 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project2.cpp:8:
+../project2.cpp: In member function ‘myString& myString::operator=(char*)’:
+../project2.cpp:92:9: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  return NULL;
+         ^
+../project2.cpp:64:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project2.cpp:8:
+../project2.cpp: In member function ‘myString& myString::operator=(myString&)’:
+../project2.cpp:97:9: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  return NULL;
+         ^
+../project2.cpp:64:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:212:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:46:11 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project2.cpp:8:
+../project2.cpp: In member function ‘myString& myString::operator=(char*)’:
+../project2.cpp:92:9: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  return NULL;
+         ^
+../project2.cpp:64:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project2.cpp:8:
+../project2.cpp: In member function ‘myString& myString::operator=(myString&)’:
+../project2.cpp:97:9: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  return NULL;
+         ^
+../project2.cpp:64:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:212:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+03:44:38 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘myString& myString::operator=(char*)’:
+../project2.cpp:93:10: error: ‘inpStr’ was not declared in this scope
+   while (inpStr[i] != '\0')i++;
+          ^~~~~~
+../project2.cpp:93:10: note: suggested alternative: ‘ino_t’
+   while (inpStr[i] != '\0')i++;
+          ^~~~~~
+          ino_t
+../project2.cpp:98:18: error: ‘inpStr’ was not declared in this scope
+    strArray[j] = inpStr[j];
+                  ^~~~~~
+../project2.cpp:98:18: note: suggested alternative: ‘ino_t’
+    strArray[j] = inpStr[j];
+                  ^~~~~~
+                  ino_t
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project2.cpp:8:
+../project2.cpp: In member function ‘myString& myString::operator=(myString&)’:
+../project2.cpp:104:9: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  return NULL;
+         ^
+../project2.cpp:64:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:219:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+03:45:00 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project2.cpp:8:
+../project2.cpp: In member function ‘myString& myString::operator=(myString&)’:
+../project2.cpp:104:9: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  return NULL;
+         ^
+../project2.cpp:64:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:219:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+03:51:30 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:223:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+g++ -o "Project 2" project2.o 
+project2.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:287: undefined reference to `bagOfWords::~bagOfWords()'
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:288: undefined reference to `bagOfWords::~bagOfWords()'
+collect2: error: ld returned 1 exit status
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:04:18 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:234:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+g++ -o "Project 2" project2.o 
+project2.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:298: undefined reference to `bagOfWords::~bagOfWords()'
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:299: undefined reference to `bagOfWords::~bagOfWords()'
+collect2: error: ld returned 1 exit status
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:39:08 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:128:6: warning: variable ‘smallestSize’ set but not used [-Wunused-but-set-variable]
+  int smallestSize;
+      ^~~~~~~~~~~~
+../project2.cpp:129:7: warning: unused variable ‘sameSoFar’ [-Wunused-variable]
+  bool sameSoFar = true;
+       ^~~~~~~~~
+../project2.cpp:130:7: warning: variable ‘sameSize’ set but not used [-Wunused-but-set-variable]
+  bool sameSize = false;
+       ^~~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:252:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+g++ -o "Project 2" project2.o 
+project2.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:316: undefined reference to `bagOfWords::~bagOfWords()'
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:317: undefined reference to `bagOfWords::~bagOfWords()'
+collect2: error: ld returned 1 exit status
+Info: Nothing to build for Project1
