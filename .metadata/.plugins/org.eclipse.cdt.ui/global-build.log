@@ -656,3 +656,25 @@ project2.o: In function `main':
 /home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:317: undefined reference to `bagOfWords::~bagOfWords()'
 collect2: error: ld returned 1 exit status
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:50:48 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:321:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+g++ -o "Project 2" project2.o 
+project2.o: In function `main':
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:385: undefined reference to `bagOfWords::~bagOfWords()'
+/home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:386: undefined reference to `bagOfWords::~bagOfWords()'
+collect2: error: ld returned 1 exit status
+Info: Nothing to build for Project1

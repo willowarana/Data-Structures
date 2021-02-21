@@ -124,12 +124,14 @@ bool myString::operator == (myString& B) {
 }
 // comparison of myString A if less than myString B - return true or false
 bool myString::operator < (myString& B) {
-	//TODO
 	int smallestSize;
-	bool sameSoFar = true;
+	int firstDiff = -1;
 	bool sameSize = false;
+	bool bBigger = false;
+
 	if(size < B.size) {
 		smallestSize = size;
+		bool bBigger = true;
 	}
 	else if(size == B.size) {
 		smallestSize = size;
@@ -137,6 +139,32 @@ bool myString::operator < (myString& B) {
 	}
 	else {
 		smallestSize = B.size;
+	}
+
+	for(int i = 0; i < smallestSize; ++i) {
+		if(strArray[i] != B.strArray[i]) {
+			firstDiff = i;
+		}
+	}
+
+	if(firstDiff != -1) {
+		if(strArray[firstDiff] > B.strArray[firstDiff]) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	else if(firstDiff == -1 && sameSize) {
+		return false;
+	}
+	else {
+		if(bBigger) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	//compare each value in strArray and find first one to be different
 	//compare that value to know which is smaller
@@ -147,7 +175,48 @@ return false;
 }
 // comparison of myString A if greater than myString B - return true or false
 bool myString::operator > (myString& B) {
-	// TODO
+	int smallestSize;
+		int firstDiff = -1;
+		bool sameSize = false;
+		bool bBigger = false;
+
+		if(size < B.size) {
+			smallestSize = size;
+			bool bBigger = true;
+		}
+		else if(size == B.size) {
+			smallestSize = size;
+			sameSize = true;
+		}
+		else {
+			smallestSize = B.size;
+		}
+
+		for(int i = 0; i < smallestSize; ++i) {
+			if(strArray[i] != B.strArray[i]) {
+				firstDiff = i;
+			}
+		}
+
+		if(firstDiff != -1) {
+			if(strArray[firstDiff] < B.strArray[firstDiff]) {
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+		else if(firstDiff == -1 && sameSize) {
+			return false;
+		}
+		else {
+			if(bBigger) {
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
 	return false;
 }
 // get one token from redirected input and return that string (alphanumeric)
