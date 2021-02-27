@@ -678,3 +678,354 @@ project2.o: In function `main':
 /home/aranawillow/Desktop/DataStructures/Project 2/Debug/../project2.cpp:386: undefined reference to `bagOfWords::~bagOfWords()'
 collect2: error: ld returned 1 exit status
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+22:28:22 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:321:9: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+  return NULL;
+         ^~~~
+../project2.cpp: In function ‘int main()’:
+../project2.cpp:333:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for Project 2
+22:30:52 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+22:31:17 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+03:16:54 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+03:22:10 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+Info: Nothing to build for HelloWorld
+04:37:13 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:343:13: error: cannot convert ‘myString**’ to ‘myString*’ in assignment
+   _words = &resized;
+             ^~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:39:51 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:343:13: error: cannot convert ‘myString’ to ‘myString*’ in assignment
+   _words = *resized;
+             ^~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+04:40:15 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:327:2: warning: ‘location’ is used uninitialized in this function [-Wuninitialized]
+  if(location != -1) {
+  ^~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+04:42:07 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+Info: Nothing to build for HelloWorld
+04:42:37 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:327:2: warning: ‘location’ is used uninitialized in this function [-Wuninitialized]
+  if(location != -1) {
+  ^~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+04:42:41 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+04:45:35 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+04:46:16 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+Info: Nothing to build for HelloWorld
+04:49:26 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:327:2: warning: ‘location’ is used uninitialized in this function [-Wuninitialized]
+  if(location != -1) {
+  ^~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+20:29:59 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+20:33:14 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+Info: Nothing to build for HelloWorld
+20:33:38 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:327:2: warning: ‘location’ is used uninitialized in this function [-Wuninitialized]
+  if(location != -1) {
+  ^~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+20:34:13 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+20:34:40 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+Info: Nothing to build for HelloWorld
+21:33:23 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+21:29:43 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘int bagOfWords::binarySearchAndInsert(myString&)’:
+../project2.cpp:368:13: warning: unused variable ‘resized’ [-Wunused-variable]
+   myString* resized = new myString[_size + 1];
+             ^~~~~~~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+17:28:39 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+17:29:53 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+17:30:36 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+Info: Nothing to build for HelloWorld
+17:30:53 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘void bagOfWords::addWord(myString&)’:
+../project2.cpp:398:13: error: a function-definition is not allowed here before ‘{’ token
+ int main () {
+             ^
+../project2.cpp:458:2: error: expected ‘}’ at end of input
+  }
+  ^
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+17:31:45 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+../project2.cpp: In member function ‘void bagOfWords::addWord(myString&)’:
+../project2.cpp:398:13: error: a function-definition is not allowed here before ‘{’ token
+ int main () {
+             ^
+../project2.cpp:458:2: error: expected ‘}’ at end of input
+  }
+  ^
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+17:32:38 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+17:32:42 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+17:33:26 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+17:34:12 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]
+Info: Nothing to build for HelloWorld
+17:44:36 **** Incremental Build of configuration Debug for project Project 2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
+../project2.cpp: In member function ‘bool myString::operator<(myString&)’:
+../project2.cpp:134:8: warning: unused variable ‘bBigger’ [-Wunused-variable]
+   bool bBigger = true;
+        ^~~~~~~
+../project2.cpp: In member function ‘bool myString::operator>(myString&)’:
+../project2.cpp:185:9: warning: unused variable ‘bBigger’ [-Wunused-variable]
+    bool bBigger = true;
+         ^~~~~~~
+g++ -o "Project 2" project2.o 
+Info: Nothing to build for Project1
+17:44:42 **** Incremental Build of configuration Release for project Project 2 ****
+make all 
+Cannot run program "make": Unknown reason
+
+Error: Program "make" not found in PATH
+PATH=[/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin]

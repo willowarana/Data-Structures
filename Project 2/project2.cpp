@@ -245,6 +245,7 @@ char* getNextToken () {
 class bagOfWords {
 	private:
 		int binarySearchAndInsert (myString& W);
+		int binarySearch(myString& wordToFind, int first, int last);
 
 	protected:
 		myString* _words;
@@ -315,15 +316,82 @@ bagOfWords* bagOfWords::removeStopWords(myString* stopWords, int numStopWords){
 	return NULL;
 }
 
+int bagOfWords::binarySearch(myString& W, int first, int last) {
+	int mid;
+	int result = -1;
+	myString midval;
+
+	if(first < last) {
+		mid = (first + last) / 2;
+		midval = _words[mid];
+		if(W == midval) {
+			++_frequencies[mid];
+			return -1;
+		}
+		else if(midval < W) {
+			binarySearch(W, mid + 1, last);
+		}
+		else {
+			return binarySearch(W, first, mid);
+		}
+	}
+	else {
+		if((first == last) && _words[first] < W) {
+			result = first + 1;
+		}
+		else {
+			result = first;
+		}
+	}
+	return result;
+}
 // to search for a given word in _words - returns 0 if not found, 1 if found
 int bagOfWords::binarySearchAndInsert (myString& wordToFind){
-	// TODO
-	return NULL;
+	//find if it's already there and increment frequency if so
+
+	//look at textbook to figure out how to do binary search and change the code below
+	//if needed
+
+	int location = binarySearch(wordToFind, 0, _size - 1);
+	bool found;
+	if(location == -1) {
+		found = true;
+	}
+	else {
+		found = false;
+	}
+
+	//re-do this part to insert instead of put at end and then re-sort
+	//if it's not there make space and add it to the end and increment size class variable
+	if(!found) {
+		myString* resized = new myString[_size + 1];
+		for(int i = 0; i < _size; ++i) {
+			resized[i] = _words[i];
+		}
+
+		if(_words != NULL) {
+			delete[] _words;
+		}
+		_words = resized;
+		_size = _size + 1;
+
+		for(int i = _size - 1; i > location; i--) {
+			_words[i] = _words[i - 1];
+		}
+
+		_words[location] = wordToFind;
+	}
+	if(found) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
 }
 
 // method to add words to the bagOfWords object
-void bagOfWords::addWord(myString & newWord){
-	// TODO
+void bagOfWords::addWord(myString& newWord){
+	binarySearchAndInsert(newWord);
 	}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -351,7 +419,7 @@ int main () {
 		(*myBag).addWord(*tokenString); //add token to myBag
 		token = getNextToken ();
 	}
-
+/*
 	// this should display the token and frequency;
 	// note that becuase you are using binary search and insert the tokens will
 	// be sorted alphabetically
@@ -384,6 +452,9 @@ int main () {
 	delete [] stopWordsList;
 	delete myBag;
 	delete newBag;
+	*/
+	delete [] stopWordsList;
+
 	}
 
 
