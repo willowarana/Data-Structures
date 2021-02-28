@@ -128,10 +128,28 @@ bool myString::operator < (myString& B) {
 	int firstDiff = -1;
 	bool sameSize = false;
 	bool bBigger = false;
+	bool aCapital = false;
+	bool bCapital = false;
+	bool firstDiffFound = false;
+
+	if(((strArray[0] <= 'Z') && (B.strArray[0] >= 'a'))) {
+		aCapital = true;
+	}
+	else if (((strArray[0] >= 'Z') && (B.strArray[0] < 'a'))) {
+		bCapital = true;
+	}
+
+	if(aCapital) {
+		return true;
+	}
+
+	if(bCapital) {
+		return false;
+	}
 
 	if(size < B.size) {
 		smallestSize = size;
-		bool bBigger = true;
+		bBigger = true;
 	}
 	else if(size == B.size) {
 		smallestSize = size;
@@ -141,13 +159,14 @@ bool myString::operator < (myString& B) {
 		smallestSize = B.size;
 	}
 
-	for(int i = 0; i < smallestSize; ++i) {
+	for(int i = 0; i < smallestSize && !firstDiffFound; ++i) {
 		if(strArray[i] != B.strArray[i]) {
 			firstDiff = i;
+			firstDiffFound = true;
 		}
 	}
 
-	if(firstDiff != -1) {
+	if(firstDiffFound) {
 		if(strArray[firstDiff] > B.strArray[firstDiff]) {
 			return false;
 		}
@@ -155,7 +174,7 @@ bool myString::operator < (myString& B) {
 			return true;
 		}
 	}
-	else if(firstDiff == -1 && sameSize) {
+	else if((!firstDiffFound) && sameSize) {
 		return false;
 	}
 	else {
@@ -179,6 +198,24 @@ bool myString::operator > (myString& B) {
 		int firstDiff = -1;
 		bool sameSize = false;
 		bool bBigger = false;
+		bool aCapital = false;
+		bool bCapital = false;
+		bool firstDiffFound = false;
+
+		if(((strArray[0] <= 'Z') && (B.strArray[0] >= 'a'))) {
+			aCapital = true;
+		}
+		else if (((strArray[0] >= 'Z') && (B.strArray[0] <= 'a'))) {
+			bCapital = true;
+		}
+
+		if(aCapital) {
+			return false;
+		}
+
+		if(bCapital) {
+			return true;
+		}
 
 		if(size < B.size) {
 			smallestSize = size;
@@ -192,13 +229,14 @@ bool myString::operator > (myString& B) {
 			smallestSize = B.size;
 		}
 
-		for(int i = 0; i < smallestSize; ++i) {
+		for(int i = 0; i < smallestSize && !firstDiffFound; ++i) {
 			if(strArray[i] != B.strArray[i]) {
 				firstDiff = i;
+				firstDiffFound = true;
 			}
 		}
 
-		if(firstDiff != -1) {
+		if(firstDiffFound) {
 			if(strArray[firstDiff] < B.strArray[firstDiff]) {
 				return false;
 			}
@@ -206,7 +244,7 @@ bool myString::operator > (myString& B) {
 				return true;
 			}
 		}
-		else if(firstDiff == -1 && sameSize) {
+		else if((!firstDiffFound) && sameSize) {
 			return false;
 		}
 		else {
@@ -299,7 +337,10 @@ void bagOfWords::setSize(int i){
 
 // print the bag of words in dictionary format
 void bagOfWords::display(){
-	// TODO
+	cout << "Bag of Words: " << _size << endl;
+	for(int i = 0; i < _size; ++i) {
+		cout << _words[i] << ": " << _frequencies[i] << endl;
+	}
 	}
 
 // sort the _words and _frequencies based on frequencies
@@ -326,17 +367,23 @@ int bagOfWords::binarySearch(myString& W, int first, int last) {
 		midval = _words[mid];
 		if(W == midval) {
 			++_frequencies[mid];
-			return -1;
+			result = -1;
 		}
 		else if(midval < W) {
-			binarySearch(W, mid + 1, last);
+			result = binarySearch(W, mid + 1, last);
 		}
 		else {
-			return binarySearch(W, first, mid);
+			result = binarySearch(W, first, mid);
 		}
 	}
 	else {
-		if((first == last) && _words[first] < W) {
+		mid = (first + last) / 2;
+		midval = _words[mid];
+		if(W == midval) {
+			++_frequencies[mid];
+			result = -1;
+		}
+		else if((first == last) && _words[first] < W) {
 			result = first + 1;
 		}
 		else {
@@ -365,21 +412,30 @@ int bagOfWords::binarySearchAndInsert (myString& wordToFind){
 	//if it's not there make space and add it to the end and increment size class variable
 	if(!found) {
 		myString* resized = new myString[_size + 1];
+		int* newFrequencies = new int[_size + 1];
 		for(int i = 0; i < _size; ++i) {
 			resized[i] = _words[i];
+			newFrequencies[i] = _frequencies[i];
 		}
 
 		if(_words != NULL) {
 			delete[] _words;
 		}
+		if(_frequencies != NULL) {
+			delete[] _frequencies;
+		}
+
 		_words = resized;
+		_frequencies = newFrequencies;
 		_size = _size + 1;
 
 		for(int i = _size - 1; i > location; i--) {
 			_words[i] = _words[i - 1];
+			_frequencies[i] = _frequencies[i - 1];
 		}
 
 		_words[location] = wordToFind;
+		_frequencies[location] = 1;
 	}
 	if(found) {
 		return 1;
@@ -419,14 +475,14 @@ int main () {
 		(*myBag).addWord(*tokenString); //add token to myBag
 		token = getNextToken ();
 	}
-/*
+
 	// this should display the token and frequency;
 	// note that becuase you are using binary search and insert the tokens will
 	// be sorted alphabetically
 	cout << endl;
 	cout << "Input display:" << endl;
 	(*myBag).display ();
-
+/*
 	(*myBag).sortFreq ();
 	cout << endl;
 	cout << "myBag - Sorted based on frequency:" << endl;
