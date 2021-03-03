@@ -47,6 +47,7 @@ class myString {
 	    bool operator < (myString& B);
 	    myString& operator = (myString& B);
 	    myString& operator = (char* B);
+	    ~myString();
 	    };
 
 // outputs a given string A
@@ -219,7 +220,7 @@ bool myString::operator > (myString& B) {
 
 		if(size < B.size) {
 			smallestSize = size;
-			bool bBigger = true;
+		   bBigger = true;
 		}
 		else if(size == B.size) {
 			smallestSize = size;
@@ -257,6 +258,12 @@ bool myString::operator > (myString& B) {
 		}
 	return false;
 }
+
+myString::~myString() {
+	if(strArray != NULL) {
+		delete [] strArray;
+	}
+}
 // get one token from redirected input and return that string (alphanumeric)
 char* getNextToken () {
 	char* str = new char[20]; //assumes a max token size of 20
@@ -284,6 +291,8 @@ class bagOfWords {
 	private:
 		int binarySearchAndInsert (myString& W);
 		int binarySearch(myString& wordToFind, int first, int last);
+		void merge(int l, int m, int r);
+		void mergeSort(int l, int r);
 
 	protected:
 		myString* _words;
@@ -345,16 +354,131 @@ void bagOfWords::display(){
 
 // sort the _words and _frequencies based on frequencies
 void bagOfWords::sortFreq(){
-// TODO
+	//find the max frequency
+	//using a for loop, step through each frequency and add each word of that
+	//to a temporary array, then add all of those to another _words2 array keeping track of
+	//the last index.
+	int maxFreq = 0;
+	for(int i = 0; i < _size; ++i) {
+		if(_frequencies[i] > maxFreq) {
+			maxFreq = _frequencies[i];
+		}
 	}
+
+	myString* tempWords = new myString[_size];
+	int* tempFreq = new int[_size];
+	int nextSpot = 0;
+	for(int i = 1; i <= maxFreq; ++i) {
+		for(int j = 0; j < _size; ++j) {
+			if(_frequencies[j] == i) {
+				tempWords[nextSpot] = _words[j];
+				tempFreq[nextSpot] = _frequencies[j];
+				++nextSpot;
+			}
+		}
+	}
+	//copy tempWords and tempFreq over to _words and _frequencies
+	if(_words != NULL) {
+			delete[] _words;
+		}
+		if(_frequencies != NULL) {
+			delete[] _frequencies;
+		}
+
+		_words = tempWords;
+		_frequencies = tempFreq;
+	}
+
+void bagOfWords::merge( int l, int m, int r) {
+	int size1 = m - l + 1;
+	int size2 = r - m;
+
+
+	myString* temp1 = new myString[size1];
+	myString* temp2 = new myString[size2];
+	int* fTemp1 = new int[size1];
+	int* fTemp2 = new int[size2];
+
+	for(int i = 0; i < size1; ++i) {
+		temp1[i] = _words[l + i];
+		fTemp1[i] = _frequencies[l + i];
+	}
+	for(int j = 0; j < size2; ++j) {
+		temp2[j] = _words[m + j + 1];
+		fTemp2[j] = _frequencies[m + j + 1];
+	}
+
+	int i = 0;
+	int j = 0;
+	int k = l;
+
+	while(i < size1 && j < size2) {
+		if(temp1[i] < temp2[j] || temp1[i] == temp2[j]) {
+			_words[k] = temp1[i];
+			_frequencies[k] = fTemp1[i];
+			++i;
+		}
+		else {
+			_words[k] = temp2[j];
+			_frequencies[k] = fTemp2[j];
+			++j;
+		}
+		++k;
+	}
+
+	while(i < size1) {
+		_words[k] = temp1[i];
+		_frequencies[k] = fTemp1[i];
+		++i;
+		++k;
+	}
+
+	while(j < size2) {
+		_words[k] = temp2[j];
+		_frequencies[k] = fTemp2[j];
+		++j;
+		++k;
+	}
+	delete [] temp1;
+	delete [] temp2;
+}
+
+void bagOfWords::mergeSort(int l, int r) {
+	if(l < r) {
+		int mid = (r + l) / 2;
+		mergeSort(l, mid);
+		mergeSort(mid + 1, r);
+		merge(l, mid, r);
+	}
+}
+
 // sort the _words and _frequencies, alphabetically
 void bagOfWords::sortWords(){
-	// TODO
+	mergeSort(0, _size - 1);
 	}
+
 
 bagOfWords* bagOfWords::removeStopWords(myString* stopWords, int numStopWords){
 	// TODO
-	return NULL;
+	bagOfWords* newBag = new bagOfWords();
+	myString wordToAdd;
+	bool doNotAdd = false;
+	for(int i = 0; i < _size; ++i) {
+		wordToAdd = _words[i];
+		for(int j = 0; j < numStopWords; ++j) {
+			if(wordToAdd == stopWords[j]) {
+				doNotAdd = true;
+			}
+		}
+		if(!doNotAdd) {
+			for(int k = 0; k < _frequencies[i]; ++k) {
+			newBag->addWord(wordToAdd);
+			}
+		}
+		doNotAdd = false;
+	}
+
+	return newBag;
 }
 
 int bagOfWords::binarySearch(myString& W, int first, int last) {
@@ -450,6 +574,15 @@ void bagOfWords::addWord(myString& newWord){
 	binarySearchAndInsert(newWord);
 	}
 
+bagOfWords::~bagOfWords() {
+	if(_words != NULL) {
+		delete [] _words;
+	}
+	if(_frequencies !=NULL) {
+		delete [] _frequencies;
+	}
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 int main () {
 	int numStopWords;
@@ -470,11 +603,16 @@ int main () {
 	//Now read a text and put them in the bagOfWords instance.
 	bagOfWords* myBag = new bagOfWords ();
 	token = getNextToken();
-	while (token != NULL) {
+	 while (token != NULL) {
 		tokenString = new myString (token); //create a myString object with thetoken
 		(*myBag).addWord(*tokenString); //add token to myBag
 		token = getNextToken ();
 	}
+
+
+
+
+
 
 	// this should display the token and frequency;
 	// note that becuase you are using binary search and insert the tokens will
@@ -482,7 +620,7 @@ int main () {
 	cout << endl;
 	cout << "Input display:" << endl;
 	(*myBag).display ();
-/*
+
 	(*myBag).sortFreq ();
 	cout << endl;
 	cout << "myBag - Sorted based on frequency:" << endl;
@@ -505,11 +643,11 @@ int main () {
 	(*newBag).display ();
 
 	// TODO: destructors
+
 	delete [] stopWordsList;
 	delete myBag;
 	delete newBag;
-	*/
-	delete [] stopWordsList;
+
 
 	}
 
