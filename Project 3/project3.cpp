@@ -343,12 +343,18 @@ ostream& operator << (ostream& s, webLinks& A)
 
 webLinks::webLinks()
 {
-    //TODO
+	URL = NULL;
+	numLinks = 0;
+	hyperLinks = NULL;
 }
 
 webLinks::webLinks(myString& x, int n)
 {
     //TODO
+	URL = new myString(x);
+	numLinks = n;
+	hyperLinks = new webLinks*[n];
+
 }
 
 myString& webLinks::getURL()
