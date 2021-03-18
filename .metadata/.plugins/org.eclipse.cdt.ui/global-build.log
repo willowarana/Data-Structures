@@ -4719,3 +4719,129 @@ Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project2.o ../project2.cpp 
 g++ -o "Project 2" project2.o 
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+21:27:10 **** Rebuild of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp:20:3: error: ‘myString’ does not name a type; did you mean ‘_ISprint’?
+   myString URL;
+   ^~~~~~~~
+   _ISprint
+../project3.cpp:25:21: error: expected ‘)’ before ‘&’ token
+   webLinks (myString& x, int n);
+                     ^
+../project3.cpp:29:3: error: ‘myString’ does not name a type; did you mean ‘_ISprint’?
+   myString& getURL();
+   ^~~~~~~~
+   _ISprint
+../project3.cpp:30:22: error: ‘myString’ has not been declared
+         void addSite(myString& t);
+                      ^~~~~~~~
+../project3.cpp: In function ‘std::ostream& operator<<(std::ostream&, webLinks&)’:
+../project3.cpp:38:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: At global scope:
+../project3.cpp:45:19: error: expected constructor, destructor, or type conversion before ‘(’ token
+ webLinks::webLinks(myString& x, int n)
+                   ^
+../project3.cpp:50:1: error: ‘myString’ does not name a type; did you mean ‘_ISprint’?
+ myString& webLinks::getURL()
+ ^~~~~~~~
+ _ISprint
+../project3.cpp: In member function ‘int webLinks::getNumLinks()’:
+../project3.cpp:58:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘webLinks* webLinks::getHyperLink(int)’:
+../project3.cpp:63:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: At global scope:
+../project3.cpp:70:24: error: variable or field ‘addSite’ declared void
+ void webLinks::addSite(myString& t)
+                        ^~~~~~~~
+../project3.cpp:70:24: error: ‘myString’ was not declared in this scope
+../project3.cpp:70:24: note: suggested alternative: ‘_ISprint’
+ void webLinks::addSite(myString& t)
+                        ^~~~~~~~
+                        _ISprint
+../project3.cpp:70:34: error: ‘t’ was not declared in this scope
+ void webLinks::addSite(myString& t)
+                                  ^
+../project3.cpp:70:34: note: suggested alternative: ‘tm’
+ void webLinks::addSite(myString& t)
+                                  ^
+                                  tm
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:93:2: error: ‘myString’ was not declared in this scope
+  myString* tokenString;
+  ^~~~~~~~
+../project3.cpp:93:2: note: suggested alternative: ‘_ISprint’
+  myString* tokenString;
+  ^~~~~~~~
+  _ISprint
+../project3.cpp:93:12: error: ‘tokenString’ was not declared in this scope
+  myString* tokenString;
+            ^~~~~~~~~~~
+../project3.cpp:92:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+21:28:47 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘std::ostream& operator<<(std::ostream&, webLinks&)’:
+../project3.cpp:341:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘myString& webLinks::getURL()’:
+../project3.cpp:356:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘int webLinks::getNumLinks()’:
+../project3.cpp:361:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘webLinks* webLinks::getHyperLink(int)’:
+../project3.cpp:366:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:395:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:396:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+21:36:11 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘myString& webLinks::getURL()’:
+../project3.cpp:357:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘int webLinks::getNumLinks()’:
+../project3.cpp:362:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘webLinks* webLinks::getHyperLink(int)’:
+../project3.cpp:367:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:396:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:397:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
