@@ -350,8 +350,7 @@ webLinks::webLinks()
 
 webLinks::webLinks(myString& x, int n)
 {
-    //TODO
-	URL = new myString(x);
+	URL = x;
 	numLinks = n;
 	hyperLinks = new webLinks*[n];
 

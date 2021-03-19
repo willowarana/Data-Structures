@@ -4985,3 +4985,92 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp
   myString* tokenString;
             ^~~~~~~~~~~
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+01:56:10 **** Rebuild of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In constructor ‘webLinks::webLinks(myString&, int)’:
+../project3.cpp:354:21: error: no match for ‘operator=’ (operand types are ‘myString’ and ‘myString*’)
+  URL = new myString();
+                     ^
+../project3.cpp:108:11: note: candidate: myString& myString::operator=(myString&)
+ myString& myString::operator = (myString& B) {
+           ^~~~~~~~
+../project3.cpp:108:11: note:   no known conversion for argument 1 from ‘myString*’ to ‘myString&’
+../project3.cpp:97:11: note: candidate: myString& myString::operator=(char*)
+ myString& myString::operator = (char* B) {
+           ^~~~~~~~
+../project3.cpp:97:11: note:   no known conversion for argument 1 from ‘myString*’ to ‘char*’
+../project3.cpp: In member function ‘myString& webLinks::getURL()’:
+../project3.cpp:363:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘int webLinks::getNumLinks()’:
+../project3.cpp:368:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘webLinks* webLinks::getHyperLink(int)’:
+../project3.cpp:373:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:402:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:403:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+01:57:04 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘myString& webLinks::getURL()’:
+../project3.cpp:363:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘int webLinks::getNumLinks()’:
+../project3.cpp:368:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘webLinks* webLinks::getHyperLink(int)’:
+../project3.cpp:373:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:402:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:403:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+01:57:25 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘myString& webLinks::getURL()’:
+../project3.cpp:362:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘int webLinks::getNumLinks()’:
+../project3.cpp:367:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In member function ‘webLinks* webLinks::getHyperLink(int)’:
+../project3.cpp:372:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:401:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:402:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
