@@ -370,6 +370,7 @@ int webLinks::getNumLinks()
 webLinks* webLinks::getHyperLink(int i)
 {
 	//TODO
+	return hyperLinks[i];
 }
 
 webLinks::~webLinks()

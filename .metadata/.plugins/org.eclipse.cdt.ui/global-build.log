@@ -5295,3 +5295,17 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp
             ^~~~~~~~~~~
 g++ -o "Project 3" project3.o 
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:18:52 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:403:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:404:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
