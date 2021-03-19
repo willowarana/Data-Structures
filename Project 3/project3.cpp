@@ -321,18 +321,27 @@ class webLinks {
 	friend ostream& operator << (ostream& s, webLinks& A);
 	protected:
 		myString URL;
+		int currLinks;
 		int numLinks;
+		int numLinked;
 		webLinks** hyperLinks;
+		webLinks** hyperLinked;
+
 	public:
 		webLinks ();
 		webLinks (myString& x, int n);
 		~webLinks ();
 		int getNumLinks();
+		int getNumLinked();
 		webLinks* getHyperLink(int i);
+		webLinks* getHyperLinked(int i);
 		myString& getURL();
         void addSite(myString& t);
 		void addNeighbor(webLinks& link);
         void setNeighbors(int nei);
+        void addHyperLinked(webLinks& link);
+
+
 };
 
 ostream& operator << (ostream& s, webLinks& A)
@@ -344,16 +353,21 @@ ostream& operator << (ostream& s, webLinks& A)
 webLinks::webLinks()
 {
 	URL = NULL;
+	numLinked = 0;
 	numLinks = 0;
 	hyperLinks = NULL;
+	hyperLinked = NULL;
+	currLinks = 0;
 }
 
 webLinks::webLinks(myString& x, int n)
 {
 	URL = x;
 	numLinks = n;
+	numLinked = 0;
 	hyperLinks = new webLinks*[n];
-
+	currLinks = 0;
+	hyperLinked = NULL;
 }
 
 myString& webLinks::getURL()
@@ -371,23 +385,47 @@ webLinks* webLinks::getHyperLink(int i)
 {
 	return hyperLinks[i];
 }
+webLinks* webLinks::getHyperLinked(int i) {
+	return hyperLinked[i];
+}
 
 webLinks::~webLinks()
 {
 	URL = NULL;
 	numLinks = 0;
+	numLinked = 0;
+	currLinks = 0;
 	if(hyperLinks != NULL) {
 		for(int i = 0; i < numLinks; ++i) {
 			delete hyperLinks[i];
 		}
 		delete [] hyperLinks;
 	}
+	if(hyperLinked != NULL) {
+		for(int i = 0; i < numLinked; ++i) {
+			delete hyperLinked[i];
+		}
+		delete [] hyperLinked;
+	}
+
 }
 
 void webLinks::addSite(myString& t)
 {
 	webLinks* toAdd = new webLinks(t,0);
 	addNeighbor(*toAdd);
+}
+void webLinks::addHyperLinked(webLinks& link) {
+	webLinks** temp = new webLinks*[numLinked + 1];
+	for(int i = 0; i < numLinked; ++i) {
+		temp[i] = hyperLinked[i];
+	}
+	(*hyperLinked)[numLinked + 1] = link;
+	if(hyperLinked != NULL) {
+		delete [] hyperLinked;
+	}
+	hyperLinked = temp;
+	++numLinked;
 }
 
 void webLinks::setNeighbors(int nei)
@@ -397,9 +435,10 @@ void webLinks::setNeighbors(int nei)
 
 void webLinks::addNeighbor(webLinks& link)
 {
-    //TODO
+	(*hyperLinks)[currLinks] = link;
+	++currLinks;
+	link.addHyperLinked(*this);
 }
-
 int main () {
 
 	int numSites;

@@ -6593,3 +6593,314 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp
             ^~~~~~~~~~~
 g++ -o "Project 3" project3.o 
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+03:07:46 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:421:26: error: cannot convert ‘webLinks’ to ‘webLinks*’ in assignment
+  hyperLinks[currLinks] = link;
+                          ^~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:434:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:435:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+03:08:07 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:421:26: error: no match for ‘operator*’ (operand type is ‘webLinks’)
+  hyperLinks[currLinks] = *link;
+                          ^~~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:434:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:435:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+03:08:42 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:421:26: error: cannot convert ‘webLinks’ to ‘webLinks*’ in assignment
+  hyperLinks[currLinks] = link;
+                          ^~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:434:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:435:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+03:09:14 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:422:26: error: cannot convert ‘webLinks’ to ‘webLinks*’ in assignment
+  hyperLinks[currLinks] = link;
+                          ^~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:435:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:436:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:26:25 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addHyperLinked(webLinks&)’:
+../project3.cpp:419:46: error: cannot convert ‘webLinks*’ to ‘webLinks**’ in initialization
+  webLinks** temp = new webLinks[numLinked + 1];
+                                              ^
+../project3.cpp:423:31: error: cannot convert ‘webLinks’ to ‘webLinks*’ in assignment
+  hyperLinked[numLinked + 1] = link;
+                               ^~~~
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:440:26: error: no match for ‘operator*’ (operand type is ‘webLinks’)
+  hyperLinks[currLinks] = *link;
+                          ^~~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:453:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:454:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:27:23 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addHyperLinked(webLinks&)’:
+../project3.cpp:419:46: error: cannot convert ‘webLinks*’ to ‘webLinks**’ in initialization
+  webLinks** temp = new webLinks[numLinked + 1];
+                                              ^
+../project3.cpp:423:31: error: cannot convert ‘webLinks’ to ‘webLinks*’ in assignment
+  hyperLinked[numLinked + 1] = link;
+                               ^~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:453:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:454:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:27:44 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addHyperLinked(webLinks&)’:
+../project3.cpp:419:46: error: cannot convert ‘webLinks*’ to ‘webLinks**’ in initialization
+  webLinks** temp = new webLinks[numLinked + 1];
+                                              ^
+../project3.cpp:423:31: error: cannot convert ‘webLinks’ to ‘webLinks*’ in assignment
+  hyperLinked[numLinked + 1] = link;
+                               ^~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:453:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:454:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:28:43 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addHyperLinked(webLinks&)’:
+../project3.cpp:423:31: error: cannot convert ‘webLinks’ to ‘webLinks*’ in assignment
+  hyperLinked[numLinked + 1] = link;
+                               ^~~~
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:3: error: no match for ‘operator*’ (operand type is ‘webLinks’)
+  (*link).add
+   ^~~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:454:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:455:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:28:56 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:3: error: no match for ‘operator*’ (operand type is ‘webLinks’)
+  (*link).add
+   ^~~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:454:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:455:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:29:44 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:26: error: no matching function for call to ‘webLinks::addHyperLinked(webLinks*)’
+  link.addHyperLinked(this);
+                          ^
+../project3.cpp:418:6: note: candidate: void webLinks::addHyperLinked(webLinks&)
+ void webLinks::addHyperLinked(webLinks& link) {
+      ^~~~~~~~
+../project3.cpp:418:6: note:   no known conversion for argument 1 from ‘webLinks*’ to ‘webLinks&’
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:455:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:456:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:30:13 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:27: error: expected primary-expression before ‘)’ token
+  link.addHyperLinked(this&);
+                           ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:455:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:456:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:30:37 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:3: error: no match for ‘operator*’ (operand type is ‘webLinks’)
+  (*link).addHyperLinked(this&);
+   ^~~~~
+../project3.cpp:442:30: error: expected primary-expression before ‘)’ token
+  (*link).addHyperLinked(this&);
+                              ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:455:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:456:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:30:49 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:27: error: expected primary-expression before ‘)’ token
+  link.addHyperLinked(this&);
+                           ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:455:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:456:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:31:32 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:26: error: no matching function for call to ‘webLinks::addHyperLinked(webLinks*)’
+  link.addHyperLinked(this);
+                          ^
+../project3.cpp:418:6: note: candidate: void webLinks::addHyperLinked(webLinks&)
+ void webLinks::addHyperLinked(webLinks& link) {
+      ^~~~~~~~
+../project3.cpp:418:6: note:   no known conversion for argument 1 from ‘webLinks*’ to ‘webLinks&’
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:455:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:456:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:32:13 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addNeighbor(webLinks&)’:
+../project3.cpp:442:27: error: expected primary-expression before ‘)’ token
+  link.addHyperLinked(this&);
+                           ^
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:455:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:456:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:32:55 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:455:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:456:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+15:35:31 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:449:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:450:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
