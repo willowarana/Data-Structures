@@ -358,12 +358,13 @@ webLinks::webLinks(myString& x, int n)
 
 myString& webLinks::getURL()
 {
-	//TODO
+	myString* copy = new myString(URL);
+	return *copy;
 }
 
 int webLinks::getNumLinks()
 {
-	//TODO
+	return numLinks;
 }
 
 webLinks* webLinks::getHyperLink(int i)
