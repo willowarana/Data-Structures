@@ -375,7 +375,14 @@ webLinks* webLinks::getHyperLink(int i)
 
 webLinks::~webLinks()
 {
-    //TODO
+	URL = NULL;
+	numLinks = 0;
+	if(hyperLinks != NULL) {
+		for(int i = 0; i < numLinks; ++i) {
+			delete hyperLinks[i];
+		}
+		delete [] hyperLinks;
+	}
 }
 
 void webLinks::addSite(myString& t)

@@ -5309,3 +5309,1224 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp
             ^~~~~~~~~~~
 g++ -o "Project 3" project3.o 
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:22:51 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In destructor ‘webLinks::~webLinks()’:
+../project3.cpp:379:9: error: no match for ‘operator!=’ (operand types are ‘myString’ and ‘long int’)
+  if(URL != NULL) {
+         ^
+In file included from /usr/include/c++/7/iosfwd:40:0,
+                 from /usr/include/c++/7/ios:38,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/postypes.h:221:5: note: candidate: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/7/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::fpos<_StateT>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_pair.h:461:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_pair.h:461:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::pair<_T1, _T2>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:314:5: note: candidate: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:314:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:352:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:352:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:1133:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator!=(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1133:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:1139:5: note: candidate: template<class _Iterator> bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator!=(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1139:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/string:41:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/allocator.h:158:5: note: candidate: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+/usr/include/c++/7/bits/allocator.h:158:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::allocator<_CharT>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/string:41:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/allocator.h:164:5: note: candidate: template<class _Tp> bool std::operator!=(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+/usr/include/c++/7/bits/allocator.h:164:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::allocator<_CharT>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6056:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6056:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6069:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6069:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   mismatched types ‘const _CharT*’ and ‘myString’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6081:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6081:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  if(URL != NULL) {
+            ^
+In file included from /usr/include/c++/7/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/system_error:319:3: note: candidate: bool std::operator!=(const std::error_code&, const std::error_code&)
+   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:319:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_code&’
+/usr/include/c++/7/system_error:323:3: note: candidate: bool std::operator!=(const std::error_code&, const std::error_condition&)
+   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:323:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_code&’
+/usr/include/c++/7/system_error:327:3: note: candidate: bool std::operator!=(const std::error_condition&, const std::error_code&)
+   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:327:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_condition&’
+/usr/include/c++/7/system_error:331:3: note: candidate: bool std::operator!=(const std::error_condition&, const std::error_condition&)
+   operator!=(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/7/system_error:331:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_condition&’
+In file included from /usr/include/c++/7/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/7/bits/basic_ios.h:37,
+                 from /usr/include/c++/7/ios:44,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/streambuf_iterator.h:210:5: note: candidate: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^~~~~~~~
+/usr/include/c++/7/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:12: note:   ‘myString’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+  if(URL != NULL) {
+            ^
+../project3.cpp:380:10: error: type ‘class myString’ argument given to ‘delete’, expected pointer
+   delete URL;
+          ^~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:413:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:414:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:24:10 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In destructor ‘webLinks::~webLinks()’:
+../project3.cpp:379:11: error: no match for ‘operator==’ (operand types are ‘myString’ and ‘long int’)
+  if(!(URL == NULL)) {
+           ^
+../project3.cpp:121:6: note: candidate: bool myString::operator==(myString&) <near match>
+ bool myString::operator == (myString& B) {
+      ^~~~~~~~
+../project3.cpp:121:6: note:   conversion of argument 1 would be ill-formed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  if(!(URL == NULL)) {
+              ^
+../project3.cpp:69:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+In file included from /usr/include/c++/7/iosfwd:40:0,
+                 from /usr/include/c++/7/ios:38,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/7/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::fpos<_StateT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_pair.h:448:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_pair.h:448:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::pair<_T1, _T2>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:302:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:302:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:340:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:340:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:1121:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1121:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:1127:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1127:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:41:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+/usr/include/c++/7/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::allocator<_CharT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:41:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+/usr/include/c++/7/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::allocator<_CharT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6009:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6009:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6017:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6017:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6031:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6031:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   mismatched types ‘const _CharT*’ and ‘myString’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6043:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6043:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/system_error:292:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_code&)
+   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:292:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_code&’
+/usr/include/c++/7/system_error:297:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_condition&)
+   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:297:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_code&’
+/usr/include/c++/7/system_error:304:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_code&)
+   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:304:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_condition&’
+/usr/include/c++/7/system_error:311:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_condition&)
+   operator==(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/7/system_error:311:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_condition&’
+In file included from /usr/include/c++/7/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/7/bits/basic_ios.h:37,
+                 from /usr/include/c++/7/ios:44,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/streambuf_iterator.h:204:5: note: candidate: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^~~~~~~~
+/usr/include/c++/7/bits/streambuf_iterator.h:204:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+  if(!(URL == NULL)) {
+              ^
+../project3.cpp:380:10: error: type ‘class myString’ argument given to ‘delete’, expected pointer
+   delete URL;
+          ^~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:413:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:414:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:24:59 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In destructor ‘webLinks::~webLinks()’:
+../project3.cpp:379:11: error: no match for ‘operator==’ (operand types are ‘myString’ and ‘long int’)
+  if(!(URL == NULL)) {
+           ^
+../project3.cpp:121:6: note: candidate: bool myString::operator==(myString&) <near match>
+ bool myString::operator == (myString& B) {
+      ^~~~~~~~
+../project3.cpp:121:6: note:   conversion of argument 1 would be ill-formed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: error: cannot bind non-const lvalue reference of type ‘myString&’ to an rvalue of type ‘myString’
+  if(!(URL == NULL)) {
+              ^
+../project3.cpp:69:1: note:   after user-defined conversion: myString::myString(char*)
+ myString::myString (char* inpStr) {
+ ^~~~~~~~
+In file included from /usr/include/c++/7/iosfwd:40:0,
+                 from /usr/include/c++/7/ios:38,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/7/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::fpos<_StateT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_pair.h:448:5: note: candidate: template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_pair.h:448:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::pair<_T1, _T2>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:302:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:302:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:340:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:340:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:1121:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator==(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1121:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/stl_iterator.h:1127:5: note: candidate: template<class _Iterator> bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator==(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7/bits/stl_iterator.h:1127:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::move_iterator<_IteratorL>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:41:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/allocator.h:146:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^~~~~~~~
+/usr/include/c++/7/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::allocator<_CharT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:41:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/allocator.h:152:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_CharT>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^~~~~~~~
+/usr/include/c++/7/bits/allocator.h:152:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::allocator<_CharT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6009:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6009:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6017:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6017:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6031:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6031:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   mismatched types ‘const _CharT*’ and ‘myString’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/basic_string.h:6043:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6043:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+  if(!(URL == NULL)) {
+              ^
+In file included from /usr/include/c++/7/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/system_error:292:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_code&)
+   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:292:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_code&’
+/usr/include/c++/7/system_error:297:3: note: candidate: bool std::operator==(const std::error_code&, const std::error_condition&)
+   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:297:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_code&’
+/usr/include/c++/7/system_error:304:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_code&)
+   operator==(const error_condition& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7/system_error:304:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_condition&’
+/usr/include/c++/7/system_error:311:3: note: candidate: bool std::operator==(const std::error_condition&, const std::error_condition&)
+   operator==(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/7/system_error:311:3: note:   no known conversion for argument 1 from ‘myString’ to ‘const std::error_condition&’
+In file included from /usr/include/c++/7/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/7/bits/basic_ios.h:37,
+                 from /usr/include/c++/7/ios:44,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+/usr/include/c++/7/bits/streambuf_iterator.h:204:5: note: candidate: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^~~~~~~~
+/usr/include/c++/7/bits/streambuf_iterator.h:204:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/x86_64-linux-gnu/bits/_G_config.h:19:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libio.h:35,
+                 from /usr/include/stdio.h:41,
+                 from /usr/include/c++/7/cstdio:42,
+                 from /usr/include/c++/7/ext/string_conversions.h:43,
+                 from /usr/include/c++/7/bits/basic_string.h:6361,
+                 from /usr/include/c++/7/string:52,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from ../project3.cpp:10:
+../project3.cpp:379:14: note:   ‘myString’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+  if(!(URL == NULL)) {
+              ^
+../project3.cpp:380:10: error: type ‘class myString’ argument given to ‘delete’, expected pointer
+   delete URL;
+          ^~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:413:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:414:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:25:48 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:409:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:410:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:26:15 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In destructor ‘webLinks::~webLinks()’:
+../project3.cpp:378:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  URL = "";
+        ^~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:410:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:411:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:26:35 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:410:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:411:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+Info: Nothing to build for Project 3
+Info: Nothing to build for Project1
