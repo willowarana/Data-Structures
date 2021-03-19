@@ -369,7 +369,6 @@ int webLinks::getNumLinks()
 
 webLinks* webLinks::getHyperLink(int i)
 {
-	//TODO
 	return hyperLinks[i];
 }
 
@@ -387,12 +386,13 @@ webLinks::~webLinks()
 
 void webLinks::addSite(myString& t)
 {
-    //TODO
+	webLinks* toAdd = new webLinks(t,0);
+	addNeighbor(*toAdd);
 }
 
 void webLinks::setNeighbors(int nei)
 {
-    //TODO
+	numLinks = nei;
 }
 
 void webLinks::addNeighbor(webLinks& link)

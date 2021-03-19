@@ -6530,3 +6530,66 @@ Info: Nothing to build for HelloWorld
 Info: Nothing to build for Project 2
 Info: Nothing to build for Project 3
 Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:41:14 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addSite(myString&)’:
+../project3.cpp:391:19: error: conversion from ‘webLinks*’ to non-scalar type ‘webLinks’ requested
+  webLinks toAdd = new webLinks(t,0);
+                   ^~~~~~~~~~~~~~~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:412:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:413:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:41:33 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In member function ‘void webLinks::addSite(myString&)’:
+../project3.cpp:391:12: warning: unused variable ‘toAdd’ [-Wunused-variable]
+  webLinks* toAdd = new webLinks(t,0);
+            ^~~~~
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:412:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:413:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:42:10 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:412:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:413:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
+Info: Nothing to build for HelloWorld
+Info: Nothing to build for Project 2
+02:44:38 **** Incremental Build of configuration Debug for project Project 3 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o project3.o ../project3.cpp 
+../project3.cpp: In function ‘int main()’:
+../project3.cpp:410:11: warning: unused variable ‘token’ [-Wunused-variable]
+     char* token;
+           ^~~~~
+../project3.cpp:411:12: warning: unused variable ‘tokenString’ [-Wunused-variable]
+  myString* tokenString;
+            ^~~~~~~~~~~
+g++ -o "Project 3" project3.o 
+Info: Nothing to build for Project1
