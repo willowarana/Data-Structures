@@ -11,7 +11,7 @@
 
 using namespace std;
 
-// myString class and corresponding methods come here
+// myString class and corresponding methods
 void emptyString (char* A, int n) {
 	for (int i=0; i < n; i++) //set each elemnt to '\'
 	{A[i] = '\0';}
@@ -107,7 +107,9 @@ myString& myString::operator = (char* B) {
 // overloading = operator - initialize object with an existing mystring object
 myString& myString::operator = (myString& B) {
 	//delete the old strArray to free up memory
+	if(strArray != NULL) {
 	delete [] strArray;
+	}
 		strArray = NULL;
 		size = B.size;
 		strArray = new char[size];
@@ -296,15 +298,15 @@ myString::~myString() {
 }
 // get one token from redirected input and return that string (alphanumeric)
 char* getNextToken () {
-	char* str = new char[20]; //assumes a max token size of 20
-	emptyString (str, 20);
+	char* str = new char[25]; //assumes a max token size of 20
+	emptyString (str, 25);
 	char c;
 	int i = 0;
 	while (!cin.eof()) {
 		cin.get(c);
 		if (!cin.eof ()) {
 			if ((c != '\n') && (c != ' ')) {
-				if ( ((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')) || ((c >= '0') && (c <= '9')) )
+				if ( ((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')) || ((c >= '0') && (c <= '9')) || (c == '.') ||(c == '-'))
 					str[i++] = c;
 			}
 			else if ((c == '\n') && (i > 0))
@@ -320,134 +322,108 @@ class webLinks {
 
 	friend ostream& operator << (ostream& s, webLinks& A);
 	protected:
-		myString URL;
-		int currLinks;
-		int numLinks;
-		int numLinked;
-		webLinks** hyperLinks;
-		webLinks** hyperLinked;
+		myString URL; //the URL of the website
+		int currLinks; //the current number of links
+		int numLinks; //the total number of links
+		webLinks** hyperLinks; //the hyperlinks contained in the website
 
 	public:
 		webLinks ();
 		webLinks (myString& x, int n);
 		~webLinks ();
 		int getNumLinks();
-		int getNumLinked();
 		webLinks* getHyperLink(int i);
-		webLinks* getHyperLinked(int i);
 		myString& getURL();
         void addSite(myString& t);
 		void addNeighbor(webLinks& link);
         void setNeighbors(int nei);
-        void addHyperLinked(webLinks& link);
 
 
 };
 
+//prints out the URL of the website
 ostream& operator << (ostream& s, webLinks& A)
 {
 	s << A.URL;
 	return s;
 }
 
+//default constructor: initializes ints to 0 and dynamic arrays to size 0
 webLinks::webLinks()
 {
-	URL = NULL;
-	numLinked = 0;
 	numLinks = 0;
-	hyperLinks = NULL;
-	hyperLinked = NULL;
+	hyperLinks = new webLinks*[0]; //create space in memory for the array of size 0
 	currLinks = 0;
 }
 
+//non-default constructor: initialize the URL of the website and its number of hyperlinks
 webLinks::webLinks(myString& x, int n)
 {
 	URL = x;
 	numLinks = n;
-	numLinked = 0;
-	hyperLinks = new webLinks*[n];
-	currLinks = 0;
-	hyperLinked = NULL;
+	hyperLinks = new webLinks*[n]; //create space in memory for the array of size 0
+	currLinks = 0; //this is 0 because no links have been added yet
 }
 
+//returns the URL of the website
 myString& webLinks::getURL()
 {
-	myString* copy = new myString(URL);
-	return *copy;
+	return URL;
 }
 
+//returns the number of hyperlinks contained in the website
 int webLinks::getNumLinks()
 {
 	return numLinks;
 }
 
+//returns a particular hyperlink at index i
 webLinks* webLinks::getHyperLink(int i)
 {
 	return hyperLinks[i];
 }
-webLinks* webLinks::getHyperLinked(int i) {
-	return hyperLinked[i];
-}
 
+//destructor: set ints back to 0 and delete dynamically created objects
 webLinks::~webLinks()
 {
-	URL = NULL;
 	numLinks = 0;
-	numLinked = 0;
 	currLinks = 0;
 	if(hyperLinks != NULL) {
-		for(int i = 0; i < numLinks; ++i) {
-			delete hyperLinks[i];
-		}
 		delete [] hyperLinks;
 	}
-	if(hyperLinked != NULL) {
-		for(int i = 0; i < numLinked; ++i) {
-			delete hyperLinked[i];
-		}
-		delete [] hyperLinked;
-	}
 
 }
 
+//set the URL of the website
 void webLinks::addSite(myString& t)
 {
-	webLinks* toAdd = new webLinks(t,0);
-	addNeighbor(*toAdd);
-}
-void webLinks::addHyperLinked(webLinks& link) {
-	webLinks** temp = new webLinks*[numLinked + 1];
-	for(int i = 0; i < numLinked; ++i) {
-		temp[i] = hyperLinked[i];
-	}
-	(*hyperLinked)[numLinked + 1] = link;
-	if(hyperLinked != NULL) {
-		delete [] hyperLinked;
-	}
-	hyperLinked = temp;
-	++numLinked;
+	URL = t;
 }
 
+//set the number of neighbors of the website
 void webLinks::setNeighbors(int nei)
 {
+	//create a new hyperLinks array with the desired number of neighbors
+	hyperLinks = new webLinks*[nei];
 	numLinks = nei;
 }
 
+//add a new neighbor to the website
 void webLinks::addNeighbor(webLinks& link)
 {
-	(*hyperLinks)[currLinks] = link;
-	++currLinks;
-	link.addHyperLinked(*this);
+	hyperLinks[currLinks] = &link; //put the link in the next spot in the array
+	++currLinks; //increment the current number of links because one is being added
 }
+
 int main () {
 
-	int numSites;
-	int siteNo;
-	int numNeighbors;
-	int neighbor;
+	int numSites; //the total number of websites
+	int siteNo; //the current site number
+	int numNeighbors; //the number of neighbors of the website
+	int neighbor; //the index of the neighbor
 
-    char* token;
-	myString* tokenString;
+    char* token; //a char array containing the input
+	myString* tokenString; //the input contained as a myString object
 
 	cin >> numSites;
     cout << "Number of websites: " << numSites << endl;
@@ -455,6 +431,9 @@ int main () {
 	webLinks* myWeb = new webLinks [numSites];
 	for (int i=0; i < numSites; i++)
 	{
+		token = getNextToken(); //get the next token from the input file
+		tokenString = new myString(token); //turn that token into a myString object
+		myWeb[i].addSite(*(tokenString)); //set the URL of the current webLinks object
         // read all URL and store them in the myWeb array of webLink objects
 	}
 
@@ -471,11 +450,71 @@ int main () {
 	}
 
     // display all webLink objects using the overloaded << operator
+	cout << "~~~~~WebLinks: " << endl;
+	for(int i = 0; i < numSites; ++i) {
+		cout << myWeb[i] << ": " << endl; //print out each webLinks object
+		for(int j = 0; j < myWeb[i].getNumLinks(); ++j) {
+			cout << "** " << *(myWeb[i].getHyperLink(j)) << endl; //print out each hyperlink
+		}
+		cout << endl;
+	}
+	cout << "~~~~~Webpages contained as hyperLinks: " << endl;
+    // display all the incoming nodes
+	int counter = 0; //number of times a website has been a hyperlink, initialized to 0
+	//array of the incoming nodes , initialized to size 0
+	webLinks** incomingNodes = new webLinks*[0];
+	//temporary array of webLinks pointers used for increasing the size of the incomingNodes
+	//array
+	webLinks** temp;
+	for(int i = 0; i < numSites; ++i) { //step through each website
+		//step through each website to see if it contains the original site as a hyperlink
+		for(int j = 0; j < numSites; ++j ) {
+			//step through the website's hyperlinks
+ 			for(int k = 0; k < myWeb[j].getNumLinks(); ++k) {
+ 				//check if the hyperLink is the original website
+				if(myWeb[j].getHyperLink(k) == &myWeb[i]) {
+					//create a temporary array with a greater size
+					temp = new webLinks*[counter + 1];
+					//copy over the incomingNodes array
+						for(int l = 0; l < counter; ++l) {
+							if(temp[l] == NULL) {
+							temp[l] = new webLinks();
+							}
+							temp[l] = incomingNodes[l];
+						}
+						if(temp[counter] == NULL) {
+						temp[counter] = new webLinks();
+						}
+						//add the new website in to the last spot of the temporary array
+						temp[counter] = &myWeb[j];
+						//set the incomingNodes array to be the temporary array
+						incomingNodes = temp;
+						//increment the number of websites that have the original as a
+						//hyperlink
+						++counter;
+					}
+				}
+			}
+		//print out the number of webpages that contained the original as a hyperlink
+		cout << myWeb[i] << ": " << counter << endl;
+		//print out each webpage that contained the original as a hyperlink
+		for(int m = 0; m < counter; ++m) {
+			cout << "** " << (*incomingNodes[m]) << endl;
+		}
+		if(!(i == (numSites - 1)))
+		cout << endl;
+		counter = 0;
+		//delete the incomingNodes object since there will be different incomingNodes
+		//for the next webpage
+		delete [] incomingNodes;
+		//reset the incomingNodes array to a new object of size 0
+		incomingNodes = new webLinks*[0];
+	}
 
-	cout << "~~~~~Webpages contained as hyperLinks:" << endl;
-    // display all the incoming nodes here
 
 	delete [] myWeb;
+	delete [] incomingNodes;
+	delete temp;
 
 	return 0;
 }
